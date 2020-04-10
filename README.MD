@@ -2,6 +2,7 @@
 
 Berisikan mater-materi perkuliahan komunikasi data
 
+- **code**		: *source code*
 - **books**		: buku-buku yang digunakan dalam perkuliahan
 - **final**		: soal-soal ujian akhir semester
 - **grades**	: nilai-nilai mahasiswa
