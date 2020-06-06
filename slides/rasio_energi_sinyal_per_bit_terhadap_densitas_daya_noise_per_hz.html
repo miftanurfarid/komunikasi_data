@@ -1,0 +1,87 @@
+<p>
+    Ada suatu parameter yang berkaitan dengan SNR. Parameter ini lebih baik dalam hal menentukan <i>data rate</i> dan <i>error rate</i> digital. Parameter ini merupakan parameter standar pengukuran kualitas dari performa sistem komunikasi digital. Parameter tersebut adalah rasio dari energi per bit dari sinyal terhadap densitas daya per hertz dari noise atau dinotasikan dengan \( E_b / N_0 \). Asumsikan suatu sinyal, baik digital maupun analog, yang membawa data digital yang ditransmisikan dengan <i>bit rate</i> \(R\). Seperti yang telah diketahui bahwa 1 watt = 1 J/s, energi per bit dalam suatu sinyal adalah \(E_b = ST_b\) dimana \(S\) adalah daya sinyal dan \(T_b\) adalah waktu yang dibutuhkan untuk mengirim 1 bit. <i>Data rate</i> R adalah \(R = 1/T_b\). Sehingga
+</p>
+
+<p style="text-align: center;">
+    \( \frac{E_b}{N_0} = \frac{S/R}{N_0} = \frac{S}{kTR} \)
+</p>
+
+<p>
+    atau, dalam notasi desibel,
+</p>
+
+<p style="text-align: center;">
+    \( \begin{align*}
+        \left( \frac{E_b}{N_0} \right)_{dB} &= S_{dBW} - 10 \log(R) - 10\log(k) - 10\log(T) \\
+        &= S_{dBW} - 10 \log(R) - 228.6 \text{ dBW} - 10\log(T)
+        \end{align*} \)
+</p>
+
+<p>
+    Rasio \(E_b/N_0\) penting karena <i>bit error rate</i> untuk data digital merupakan fungsi dari rasio ini. Mengingat bahwa nilai \(E_b/N_0\) diperlukan untuk mencapai <i>error rate</i> yang diinginkan, maka parameter dalam rumus sebelumnya dapat digunakan. Perlu diperhatikan bahwa ketika <i>bit rate</i> R meningkat, daya sinyal yang ditransmisikan (relatif terhadap noise) pasti meningkat untuk mempertahankan nilai \(E_b/N_0\) yang diperlukan.
+</p>
+<p>
+    Perhatikan contoh soal berikut ini
+</p>
+
+<p>
+    Pada <i>binary phase shift keying</i> atau BPSK, dibutuhkan \(E_b/N_0 = 8.4 \text{ dB}\) untuk <i>bit error rate</i> adalah \(10^4\) (artinya 1 bit error terjadi setiap 10000 bit). Jika <i>noise temperature</i> efektinya adalah 290 K (suhu ruangan) dan <i>data rate</i>-nya adalah 2400 bps, berapa level sinyal yang dibutuhkan?
+</p>
+
+<p style="text-align: center;">
+    \( \begin{align*} 8.4 &= S - 10\log(2400) + 228.6 - 10\log(290) \\ &= S - (10)(3.38) + 228.6 - (10)(2.46) \\ S &= -161.8 \text{ dBW}  \end{align*}\)
+</p>
+
+<p>
+    Hubungan antara \(E_b/N_0\) dan SNR adalah sebagai berikut
+</p>
+
+<p style="text-align: center;">
+    \( \frac{E_b}{N_0} = \frac{S}{N_0R} \)
+</p>
+
+<p>
+    Parameter \(N_0\) adalah densitas daya noise dengan satuan watt/hertz. Sehingga noise dalam sinyal terhadap <i>bandwidth</i> adalah
+</p>
+
+<p style="text-align: center;">
+    \(N = N_0 B\)
+</p>
+
+<p>
+    Kita substitusikan persamaan noise terhadap <i>bandwidth</i>-nya, kita dapatkan
+</p>
+
+<p style="text-align: center;">
+    \( \frac{E_b}{N_0} = \frac{S}{N} \frac{B}{R} \)
+</p>
+
+<p>
+    Persamaan lainnya adalah persamaan yang berhubungan antara \(E_b/N_0\) terhadap <i>spectral efficiency</i>. Dari persamaan Shannon dapat kita tulis sebagai berikut
+</p>
+
+<p style="text-align: center;">
+    \( \frac{S}{N} = 2^{C/B} - 1 \)
+</p>
+
+<p>
+    Sehingga
+</p>
+
+<p style="text-align: center;">
+    \( \frac{E_b}{N_0} = \frac{B}{C}\left ( 2^{C/B} - 1 \right ) \)
+</p>
+
+<p>
+    Perhatikan contoh soal berikut ini.
+</p>
+
+<p>
+    Tentukan berapa \(E_b/N_0\) minimum yang dibutuhkan untuk mendapatkan <i>spectral efficiency</i> sebesar 6 bps/Hz.
+</p>
+
+<p>Untuk mendapatkan jawabannya, kita dapat menggunakan persamaan tadi</p>
+
+<p style="text-align: center;">
+    \( \begin{align*} \frac{E_b}{N_0} &= \frac{B}{C}\left ( 2^{C/B} - 1 \right ) \\ &= \left( \frac{1}{6} \right) \left(2^6 - 1\right) \\ &= 10.5 = 10log_{10}(10.5) = 10.21 \text{ dB}\end{align*}\)
+</p>
