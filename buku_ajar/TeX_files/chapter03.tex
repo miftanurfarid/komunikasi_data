@@ -33,7 +33,7 @@ Jika sinyal yang akan ditransmisikan adalah biner (2 level tegangan), maka data 
 
 Dimana $ M $ adalah banyaknya sinyal diskret atau level tegangan.
 
-Dari Persamaan \ref{pers.nyquist} dapat kita simpulkan bahwa data rate dapat ditingkatkan dengan meningkatkan jumlah perbedaan dari elemen sinyalnya / banyaknya level tegangannya. Namun dengan meningkatkan elemen sinyal maka akan membuat beban dari receiver juga meningkat.
+Dari Persamaan (\ref{pers.nyquist}) dapat kita simpulkan bahwa data rate dapat ditingkatkan dengan meningkatkan jumlah perbedaan dari elemen sinyalnya / banyaknya level tegangannya. Namun dengan meningkatkan elemen sinyal maka akan membuat beban dari receiver juga meningkat.
 
 Misal, diketahui bahwa data digital akan ditransmisikan menggunakan modem. Bandwidth yang digunakan adalah 3100 Hz. Maka Nyquist capacity ($ C $) dari kanalnya adalah $ 2B $ = 6200 bps. Jika $ M $ = 8, maka $ C $ menjadi 18.600 bps dengan bandwidth sebesar 3100 Hz.
 
@@ -43,7 +43,7 @@ Berdasarkan persamaan Nyquist sebelumnya, kita mengetahui bahwa dengan meningkat
 
 \begin{figure}
 	\centering
-	\includegraphics[width=1\linewidth]{gambar/3.4.gambar.3.15.akibat_noise_pada_sinyal_digital}
+	\includegraphics[width=\linewidth]{gambar/3.4.gambar.3.15.akibat_noise_pada_sinyal_digital}
 	\caption{Akibat dari Noise terhadap Sinyal Digital}
 	\label{fig.aklibat_noise}
 \end{figure}
@@ -55,3 +55,28 @@ Jika data rate ditingkatkan maka lebih banyak bits yang akan terjadi selama inte
 \end{equation}
 
 Semakin tinggi nilai SNR maka semakin tinggi kualitas sinyal dan semakin sedikit repeater yang dibutuhkan.
+
+SNR sangat penting dalam transmisi data digital karena SNR yang menentukan batas atas dari data rate yang dapat dicapai. Shannon menyatakan bahwa kapasitas kanal maksimum, dalam bits per second (bps), adalah
+
+\begin{equation} \label{per.shannon}
+	C = B \log_2 (1+\text{SNR})
+\end{equation}
+
+Dimana $ C $ adalah kapasitas kanal dalam bits per second (bps) dan $ B $ adalah bandwidth kanal dalam hertz (Hz). Persamaan (\ref{per.shannon}) hanya menyatakan maksimum data rate yang dapat dicapai secara teoritis, sedangkan pada penerapannya/prakteknya data rate yang dapat dicapai lebih kecil dari nilai tersebut. Hal tersebut dikarenakan pada Persamaan \ref{per.shannon} mengasumsikan noise yang terjadi adalah white noise atau thermal noise dan tidak memperhatikan impulse noise maupun attenuation distortion maupun delay distortion.
+
+Nilai kapasitas yang ditunjukkan dari hasil Persamaan (\ref{per.shannon}) adalah \textbf{error free capacity}. Shannon menunjukkan bahwa jika data rate dari informasi di kanal kurang dari \textbf{error free capacity} maka secara teoritis memungkinkan untuk menggunakan kode sinyal yang sesuai untuk mendapatkan transmisi bebas error (error-free transmission) melalui kanal tersebut.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{gambar/3.4.gambar.3.16.spectral_efficiency_vs_snr}
+	\caption{Grafik spectral efficiency terhadap SNR}
+	\label{fig.spectral_effy_vs_snr}
+\end{figure}
+
+\textbf{Spectral efficiency} atau \textbf{bandwidth efficiency} dari transmisi digtal adalah jumlah bits per second dari data yang dapat didukung oleh setiap 1 Hz bandwidth. Spectral efficiency dapat dihitung dengan menurunkan Persamaan (\ref{per.shannon})
+
+\begin{equation} \label{pers.spectral_efficiency}
+	\text{Spectral efficiency} = \frac{C}{B} = \log_2(1+\text{SNR})
+\end{equation}
+
+Gambar \ref{fig.spectral_effy_vs_snr} menunjukkan hasil log/log scale dari Persamaan (\ref{pers.spectral_efficiency}).
