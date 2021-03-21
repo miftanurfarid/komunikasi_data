@@ -1,0 +1,14 @@
+\BOOKMARK [0][-]{chapter.1}{Pengantar Komunikasi Data}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Arsitektur Protokol}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Data Transmisi}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Konsep dan Terminologi}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{Transmisi Data Analog dan Digital}{chapter.3}% 5
+\BOOKMARK [1][-]{section.3.3}{Gangguan Transmisi}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.4}{Kapasitas Kanal}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.3.4.1}{Nyquist Bandwidth}{section.3.4}% 8
+\BOOKMARK [2][-]{subsection.3.4.2}{Shannon Capacity Formula}{section.3.4}% 9
+\BOOKMARK [0][-]{chapter.4}{Media Transmisi}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Media Transmisi Terpandu}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{Transmisi Nirkabel}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Propagasi Nirkabel}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.4}{Transmisi Line-of-sight}{chapter.4}% 14
