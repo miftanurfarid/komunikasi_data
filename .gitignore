@@ -13,3 +13,4 @@ slides/slide_2/
 *.aux
 *.synctex.gz
 *.toc
+*.log
