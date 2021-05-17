@@ -1,6 +1,22 @@
+%% Diambil dari buku Data and Computer Communications, 8th Edition
+
 \chapter{Data Link Control Protocol}
 
+\section{Key Points}
+\begin{itemize}
+	\item Karena kemungkinan kesalahan transmisi, dan karena penerima data (\textit{receiver}) mungkin perlu mengatur kecepatan kedatangan data (\textit{data rate}), teknik sinkronisasi dan antarmuka (\textit{interface}) tidak cukup dengan sendirinya. Perlu untuk menerapkan lapisan kontrol (\textit{layer of control}) di setiap perangkat komunikasi yang menyediakan fungsi seperti kontrol aliran (\textit{flow control}), deteksi kesalahan (\textit{error detection}), dan kontrol kesalahan (\textit{error control}). Lapisan kontrol (\textit{layer of control}) ini dikenal sebagai \textit{data link control protocol}.
+
+	\item \textit{Flow control} memungkinkan penerima (\textit{receiver}) untuk mengatur aliran data dari pengirim sehingga buffer penerima tidak meluap (\textit{overflow}).
+	
+	\item Dalam \textit{data link control protocol}, \textit{error control} dicapai dengan transmisi ulang frame rusak yang belum diakui atau yang meminta transmisi ulang oleh pihak lain.
+	
+	\item \textit{High-level data link control} (HDLC) adalah \textit{data link control protocol} yang banyak digunakan. Ini berisi hampir semua fitur yang ditemukan di \textit{data link control protocol} lainnya.
+\end{itemize}
+
+
 \section{Pengantar}
+
+Diskusi kita sejauh ini berkaitan dengan pengiriman sinyal melalui tautan transmisi \textit{transission link}. Untuk komunikasi data digital yang efektif, lebih banyak yang dibutuhkan untuk mengontrol dan mengelola pertukaran. Dalam bab ini, kami mengalihkan penekanan kami ke pengiriman data melalui tautan komunikasi data (\textit{data communication link}). Untuk mencapai kontrol yang diperlukan, lapisan logika (\textit{layer of logic}) ditambahkan di atas \textit{physical layer}yang dibahas dalam Bab 6; logika ini disebut sebagai kontrol tautan data atau protokol kontrol tautan data. Ketika protokol kontrol tautan data digunakan, media transmisi antar sistem disebut sebagai tautan data.
 
 \section{Flow Control}
 
