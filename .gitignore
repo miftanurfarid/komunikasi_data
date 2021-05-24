@@ -13,3 +13,6 @@ slides/slide_2/
 *.synctex.gz
 *.toc
 *.log
+*.nav
+*.out
+*.snm
