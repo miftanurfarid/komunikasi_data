@@ -41,7 +41,18 @@ Tak satu pun dari persyaratan ini dipenuhi oleh teknik yang dijelaskan dalam Bab
 
 \textit{Flow control} adalah teknik untuk memastikan bahwa entitas pengirim tidak membanjiri entitas penerima dengan data. Entitas penerima biasanya mengalokasikan \textit{buffer data} dengan beberapa panjang maksimum untuk transfer. Saat data diterima, penerima harus melakukan sejumlah pemrosesan sebelum meneruskan data ke \textit{software} tingkat yang lebih tinggi. Jika tidak ada \textit{flow control}, \textit{buffer} penerima mungkin terisi dan meluap saat memproses data lama.
 
+Untuk memulai, kami memeriksa mekanisme \textit{flow control} jika tidak ada \textit{error}. Model yang akan kita gunakan digambarkan pada Gambar \ref{fig:07.01}a, yang merupakan diagram urutan waktu vertikal. Ini memiliki keuntungan dalam menunjukkan ketergantungan waktu dan menggambarkan hubungan kirim-terima yang benar. Setiap panah mewakili satu frame yang menghubungkan tautan data antara dua stasiun. Data dikirim dalam urutan bingkai, dengan setiap bingkai berisi sebagian data dan beberapa informasi kontrol. Waktu yang dibutuhkan stasiun untuk memancarkan semua bit frame ke medium adalah waktu transmisi; ini sebanding dengan panjang frame. Waktu propagasi adalah waktu yang dibutuhkan sedikit untuk melintasi tautan antara sumber dan tujuan. Untuk bagian ini, kami berasumsi bahwa semua frame yang dikirimkan berhasil diterima; tidak ada bingkai yang hilang dan tidak ada yang datang dengan kesalahan. Selain itu, bingkai tiba dalam urutan yang sama seperti saat dikirim. Namun, setiap frame yang ditransmisikan mengalami jumlah penundaan yang berubah-ubah dan variabel sebelum penerimaan.\footnotemark
 
+\footnotetext{ 
+	On a direct point-to-point link, the amount of delay is fixed rather than variable. However, a data link control protocol can be used over a network connection, such as a circuit-switched or ATM network, in which case the delay may be variable.
+}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{gambar/fig:07.01}
+	\caption{Model dari Frame Transmission}
+	\label{fig:07.01}
+\end{figure}
 
 
 \section{Error Control}
