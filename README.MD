@@ -16,4 +16,4 @@ Repo untuk mata kuliah komunikasi data
 
     3. [High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
 
-### 
+2. ### Teknik Switching
