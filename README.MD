@@ -8,7 +8,21 @@ Repo untuk mata kuliah komunikasi data
 
 ## Video
 
-1. ### Data Link Control Protocol
+1. ### Konsep Komunikasi Data
+
+2. ### Konsep dan Arsitektur Protokol TCP/IP dan Model OSI
+
+3. ### Konsep Transmisi Data
+
+4. ### Media Transmisi
+
+5. ### Teknik Multipleksing
+
+6. ### Teknik Pengkodean Data
+
+7. ### Komunikasi Data Digital
+
+8. ### Data Link Control Protocol
 
     1. [Flow Control](https://drive.google.com/file/d/1tdDyu7iAoxGY-Y_xKz8iFvRMlTHZTULc/view?usp=sharing)
 
@@ -16,4 +30,4 @@ Repo untuk mata kuliah komunikasi data
 
     3. [High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
 
-2. ### Teknik Switching
+9. ### Teknik Switching
