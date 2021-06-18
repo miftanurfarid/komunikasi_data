@@ -14,3 +14,6 @@ Repo untuk mata kuliah komunikasi data
 
  [Error Control](https://drive.google.com/file/d/1dog0V_NOgGlPTXiqwgyn53M9pT47vGNh/view?usp=sharing)
 
+[High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
+
+### 
