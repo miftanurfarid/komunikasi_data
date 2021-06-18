@@ -20,7 +20,7 @@ Repo untuk mata kuliah komunikasi data
 
 6. ### Teknik Pengkodean Data
 
-7. ### Komunikasi Data Digital
+7. ### Teknik Komunikasi Data Digital
 
 8. ### Data Link Control Protocol
 
