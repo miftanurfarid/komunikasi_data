@@ -10,10 +10,10 @@ Repo untuk mata kuliah komunikasi data
 
 ### Data Link Control Protocol
 
-[Flow Control](https://drive.google.com/file/d/1tdDyu7iAoxGY-Y_xKz8iFvRMlTHZTULc/view?usp=sharing)
+1. [Flow Control](https://drive.google.com/file/d/1tdDyu7iAoxGY-Y_xKz8iFvRMlTHZTULc/view?usp=sharing)
 
- [Error Control](https://drive.google.com/file/d/1dog0V_NOgGlPTXiqwgyn53M9pT47vGNh/view?usp=sharing)
+2. [Error Control](https://drive.google.com/file/d/1dog0V_NOgGlPTXiqwgyn53M9pT47vGNh/view?usp=sharing)
 
-[High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
+3. [High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
 
 ### 
