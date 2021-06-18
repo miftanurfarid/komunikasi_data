@@ -8,7 +8,7 @@ Repo untuk mata kuliah komunikasi data
 
 ## Video
 
-### Data Link Control Protocol
+1. ### Data Link Control Protocol
 
 1. [Flow Control](https://drive.google.com/file/d/1tdDyu7iAoxGY-Y_xKz8iFvRMlTHZTULc/view?usp=sharing)
 
