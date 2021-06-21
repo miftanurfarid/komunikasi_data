@@ -35,3 +35,5 @@ Repo untuk mata kuliah komunikasi data
     1. [Arsitektur Switching & Circuit Switching](https://drive.google.com/file/d/1pk40SIcRC2g4lpI7A6186QfIb9KMmta-/view?usp=sharing)
 
     2. [Packet Switching](https://drive.google.com/file/d/1cYubNbHnpew6c5S_QiNhWibjA0kzSZic/view?usp=sharing)
+
+    3. [Circuit vs. Packet Swithing](https://drive.google.com/file/d/11nYCN7JzDgKTWeC_J5Ezr3lg9sFMp_Qk/view?usp=sharing)
