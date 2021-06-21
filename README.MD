@@ -31,3 +31,7 @@ Repo untuk mata kuliah komunikasi data
     3. [High Level Data Link Control (HDLC)](https://drive.google.com/file/d/1V4YSBybyPFXB5P3Vw4yZm7-hoSZZx8yu/view?usp=sharing)
 
 9. ### Teknik Switching
+
+    1. [Arsitektur Switching & Circuit Switching](https://drive.google.com/file/d/1pk40SIcRC2g4lpI7A6186QfIb9KMmta-/view?usp=sharing)
+
+    2. [Packet Switching](https://drive.google.com/file/d/1cYubNbHnpew6c5S_QiNhWibjA0kzSZic/view?usp=sharing)
