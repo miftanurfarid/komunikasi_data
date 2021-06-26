@@ -14,8 +14,18 @@ Repo untuk mata kuliah komunikasi data
 
 3. ### Konsep Transmisi Data
 
+	1. [Kapasitas Kanal](https://drive.google.com/file/d/1iXUFZfNlTpR77nTFuWVtJBB2E8UqPjQB/view?usp=sharing)
+	
 4. ### Media Transmisi
-
+	
+	1. [Twisted pair - coaxial cable](https://drive.google.com/file/d/1DN-6oGb0yCsedMQfnkgjXSiqsVkGte8K/view?usp=sharing)
+    
+    2. [Fiber optik](https://drive.google.com/file/d/1KLlcwaoaHvgkShBN4Nfp5tFSattApPFI/view?usp=sharing)
+    
+    3. [Wireless transmission frequencies - gain antenna](https://drive.google.com/file/d/1amnBexscLZ2ujKXYs9BHDVDnxS4Gj-Wp/view?usp=sharing)
+    
+    4. [Area efektif antena - LOS impairment](https://drive.google.com/file/d/1Dxonc9EwxjBIe5K5LtgJYWgFIoIFIaOB/view?usp=sharing)
+    
 5. ### Teknik Multipleksing
 
 6. ### Teknik Pengkodean Data
