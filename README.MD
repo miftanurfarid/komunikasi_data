@@ -47,3 +47,15 @@ Repo untuk mata kuliah komunikasi data
     2. [Packet Switching](https://drive.google.com/file/d/1cYubNbHnpew6c5S_QiNhWibjA0kzSZic/view?usp=sharing)
 
     3. [Circuit vs. Packet Swithing](https://drive.google.com/file/d/11nYCN7JzDgKTWeC_J5Ezr3lg9sFMp_Qk/view?usp=sharing)
+
+10. ### Soal - Jawab Ujian Akhir Semester
+
+    1. [Soal No. 1.](https://drive.google.com/file/d/1Uz5UyKZdcdiQuIFiLNdGTPAQWjd1ChMM/view?usp=sharing)
+    
+    2. [Soal No. 2.](https://drive.google.com/file/d/1YvJSJX_xPCJzLEO5CiBiCp6jO5l1Nzo8/view?usp=sharing)
+
+    3. [Soal No. 3.](https://drive.google.com/file/d/1PlJK5W4BlaSF03AFfAc4BEc7-W-UnU2k/view?usp=sharing)
+
+    4. [Soal No. 4.](https://drive.google.com/file/d/1Uz5UyKZdcdiQuIFiLNdGTPAQWjd1ChMM/view?usp=sharing)
+
+    5. [Soal No. 5.](https://drive.google.com/file/d/1Bd79N42ThbtB0BucAnTiY3ELjNKu_Iqa/view?usp=sharing)
