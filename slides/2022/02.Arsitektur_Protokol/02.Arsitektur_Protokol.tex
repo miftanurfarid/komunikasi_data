@@ -144,4 +144,73 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Host-to-Host (Transport) Layer}
+	\begin{itemize}
+		\item \textbf{Transmission Control Protocol}\\
+		May provide reliable end-to-end service or merely an end-to-end delivery service without reliability mechanisms
+		\item \textbf{TCP}\\
+		Most commonly used protocol to provide this functionality
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Application Layer}
+	\begin{itemize}
+		\item Contains the logic needed to support the various user applications
+		\item A separate module is needed for each different type of application that is peculiar to that application
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.9\textheight]{img/img04}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{TCP/IP Address Requirements}
+	\begin{itemize}
+		\item Two levels of addressing are needed:
+		\begin{itemize}
+			\item Each host on a subnetwork must have a unique global internet address
+			\item Each process with a host must have an address (known as a port) that is unique within the host
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img05}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Transmission Control Protocol (TCP)}
+	\begin{itemize}
+		\item TCP is the transport layer protocol for most applications
+		\item TCP provides a reliable connection for transfer of data between applications
+		\item A TCP segment is the basic protocol unit
+		\item TCP tracks segments between entities for duration of each connection
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.9\textheight]{img/img06}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{User Datagram Protocol (UDP)}
+	\begin{itemize}
+		\item Alternative to TCP
+		\item Does not guarantee delivery, preservation of sequence, or protection against duplication
+		\item Enables a procedure to send messages to other procedures with a minimum of protocol mechanism
+		\item Adds port addressing capability to IP
+		\item Used with Simple Network Management Protocol (SNMP)
+		\item Includes a checksum to verify that no error occurs in the data
+	\end{itemize}
+\end{frame}
+
 \end{document}
