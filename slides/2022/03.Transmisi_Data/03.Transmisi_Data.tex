@@ -150,6 +150,163 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.9\textheight]{img/img06}
+	\end{center}
+\end{frame}
 
+\begin{frame}
+	\frametitle{Data Rate and Bandwidth}
+	\begin{itemize}
+		\item 	There is a direct relationship between data rate and bandwidth
+		\item Any transmission system has a limited band of frequencies
+		\item This limits the data rate that can be carried on the transmission medium
+		\item Square waves have infinite components and hence an infinite bandwidth
+		\item Most energy in first few components
+		\item Limiting bandwidth creates distortions
+	\end{itemize}
+\end{frame}
 
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img07}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analog and Digital Data Transmission}
+	\begin{itemize}
+		\item Data: Entities that convey information
+		\item Signal: Electric or electromagnetic representations of data
+		\item Signaling: Physical propagation of the signal along a suitable medium
+		\item Transmission: Communication of data by the propagation and processing of signals
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img08}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Digital Data}
+	\begin{itemize}
+		\item Example:
+		\begin{itemize}
+			\item Text
+			\item Character strings
+			\item IRA
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img09}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Advantages and Disadvantages of\\Digital Signals}
+	\begin{itemize}
+		\item Generally cheaper
+		\item Less susceptible to noise interference
+		\item Suffer more from attenuation
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img10}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Video Signals}
+	\begin{itemize}
+		\item To produce a video signal a TV camera is used
+		\item USA standard is 483 lines per frame, at a rate of 30 complete frames per second
+		\begin{itemize}
+			\item Actual standard is 525 lines but about 42 are lost during vertical retrace
+		\end{itemize}
+		\item  Horizontal scanning frequency is 525 lines $ \times $ 30 scans = 15750 lines per second
+		\item Max frequency if line alternates between black and white as rapidly as possible
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img11}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img12}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img13}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analog and Digital Transmission}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{img/img14}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Move to Digital}
+	\begin{itemize}
+		\item \textbf{Digital technology}\\
+		LSI and VLSI technology has caused a continuing drop in the cost and size of digital circuitry
+		\item \textbf{Data integrity}\\
+		The use of repeaters has made it possible to transmit data longer distances over lower quality lines while maintaining the integrity of the data
+		\item \textbf{Capacity utilization}\\
+		It has become economical to build transmission links of very high bandwidth, including satellite channels and optical fiber, and a high degree of multiplexing is needed to utilize such capacity effectively
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Move to Digital}
+	\begin{itemize}
+		\item \textbf{Security and privacy}\\
+		Encryption techniques can be readily applied to digital data and to analog data that have been digitized
+		\item \textbf{Integration}\\
+		Economies of scale and convenience can be achieved by integrating voice, video, and digital data
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Asynchronous and Synchronous Transmission}
+	\textbf{Asynchronous}
+	\begin{itemize}
+		\item Strategy is to avoid the timing problem by not sending long, uninterrupted streams of bits
+		\item Data are transmitted one character at a time, where each character is 5 to 8 bits in length
+		\item Timing or synchronization must only be maintained within each character
+		\item The receiver has the opportunity to resynchronize at the beginning of each new character
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Asynchronous and Synchronous Transmission}
+	\textbf{Synchronous}
+	\begin{itemize}
+		\item A block of bits is transmitted in a steady stream without start and stop codes
+		\item Block may be many bits in length
+		\item To prevent timing drift between transmitter and receiver, their clocks must somehow be synchronized
+		\begin{itemize}
+			\item Provide a separate clock line between transmitter and receiver
+			\item Embed the clocking information in the data signal
+		\end{itemize}
+		\item Frame
+		\begin{itemize}
+			\item Data plus preamble, postamble, and control information
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 \end{document}
