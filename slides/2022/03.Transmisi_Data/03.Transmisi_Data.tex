@@ -309,4 +309,216 @@
 		\end{itemize}
 	\end{itemize}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Transmission Impairments}
+	\begin{itemize}
+		\item  Signal received may differ from signal
+		transmitted causing:
+		\begin{itemize}
+			\item Analog - degradation of signal quality
+			\item Digital - bit errors
+		\end{itemize}
+		\item Most significant impairments are
+		\begin{itemize}
+			\item Attenuation and attenuation distortion
+			\item Delay distortion
+			\item Noise
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Attenuation}
+	\begin{itemize}
+		\item Signal strength falls off with distance over any transmission medium
+		\item Varies with frequency
+		\item Received signal strength must be:
+		\begin{itemize}
+			\item Strong enough to be detected
+			\item Sufficiently higher than noise to be received without error
+		\end{itemize}
+		\item Strength can be increased using amplifiers or repeaters
+		\item Equalize attenuation across the band of frequencies used by using loading coils or amplifiers
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Attenuation Curves for a Voice\\Channel}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img15}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Delay Distortion Curves for a Voice Channel}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img16}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Delay Distortion}
+	\begin{itemize}
+		\item Occurs in transmission cables such as twisted
+		pair, coaxial cable, and optical fiber
+		\begin{itemize}
+			\item Does not occur when signals are transmitted through the air by means of antennas
+		\end{itemize}
+		\item Occurs because propagation velocity of a signal through a guided medium varies with frequency
+		\item Various frequency components arrive at different times resulting in phase shifts between the frequencies
+		\item Particularly critical for digital data since parts of one bit spill over into others causing intersymbol interference
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Noise}
+	\begin{itemize}
+		\item Unwanted signals inserted between transmitter and receiver
+		\item Is the major limiting factor in communications system performance
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Categories of Noise}
+	\begin{enumerate}
+		\item Thermal noise
+		\begin{itemize}
+			\item Due to thermal agitaion of electrons
+			\item Uniformly distributed across badwidths
+			\item Referred to as white noise
+		\end{itemize}
+		\item Intermodulation noise
+		\begin{itemize}
+			\item Produced by nonlinearities in the transmitter, receiver, and/or intervening transmission medium
+			\item Effect is to produce signals at a frequency that is the sum or difference of the two original frequencies
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Categories of Noise}
+	\begin{enumerate}
+		\setcounter{enumi}{2}
+		\item Impulse Noise
+		\begin{itemize}
+			\item Caused by external electromagnetic interferences
+			\item Noncontinuous, consisting of irregular pulses or spikes
+			\item Short duration and high amplitude
+			\item Minor annoyance for analog signals but a major source of error in digital data
+		\end{itemize}
+		\item Crosstalk
+		\begin{itemize}
+			\item A signal from one line is picked up by another
+			\item Can occur by electrical coupling between nearby twisted pairs or when microwave antennas pick up unwanted signals
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Channel Capacity}
+	\begin{itemize}
+		\item Maximum rate at which data can be transmitted over a given communications channel under given conditions
+		\item \textbf{Data rate}: The rate, in bits per second (bps) at which data can be communicated
+		\item \textbf{Bandwidth}: The bandwidth of the transmitted signal as constrained by the transmitter and the nature of the transmission medium, expressed in cycles per second, or hertz
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Channel Capacity}
+	\begin{itemize}
+		\item \textbf{Noise}: The average level of noise over the communications path
+		\item \textbf{Error rate}: The rate at which errors occur, where an aerror is the reception of a 1 when a 0 was transmitter or the reception of a 0 when a 1 was transmitted
+		\item The greater the bandwidth of a facility, the grater the cost
+		\item The main constraint on achieving efficiency is noise
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Nyquist Bandwidth}
+	In the case of a channel that is noise free:
+	\begin{itemize}
+		\item The limitation of data rate is simply the bandwidth of the signal
+		\begin{itemize}
+			\item If the rate of signal transmission is $ 2B $ then a signal with frequencies no greater than $ B $ is sufficient to carry the signal rate
+			\item Given a bandwidth of $ B $, the highest signal rate that can be carried is $ 2B $
+		\end{itemize}
+		\item For binary signals, the data rate that can be supported by $ B $ Hz is $ 2B $ bps
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Nyquist Bandwidth}
+	\begin{itemize}
+		\item With multilevel signaling, the Nyquist formula becomes: $$ C = 2B \log 2M $$
+		\item Data rate can be increased by increasing the number of different signal elements
+		\begin{itemize}
+			\item This increases burden on receiver
+			\item Noise and other impairments limit the practical value of M
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Shannon Capacity Formula}
+	\begin{itemize}
+		\item Considering the relation of data rate, noise and error rate:
+		\begin{itemize}
+			\item  Faster data rate shortens each bit so bursts of noise corrupts more bits
+			\item Given noise level, higher rates mean higher errors
+		\end{itemize}
+		\item Shannon developed formula relating these to signal to noise ratio (in decibels)
+		\item $ \text{SNR}_{\text{db}}= 10 \log_{10} (\text{signal}/\text{noise}) $
+		\item Capacity $ C = B \log_2(1+\text{SNR}) $
+		\begin{itemize}
+			\item Theoretical maximum capacity
+			\item Get much lower rates in practice
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img17}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{itemize}
+		\item Transmission terminology
+		\item Frequency, spectrum, and bandwidth
+		\item Analog and digital data transmission
+		\begin{itemize}
+			\item Analog and digital data
+			\item Analog and digital signals
+			\item Analog and digital transmission
+			\item Asynchronous and synchronous transmission
+		\end{itemize}
+		\item Transmission impairments
+		\begin{itemize}
+			\item  Attenuation
+			\item Delay distortion
+			\item Noise
+		\end{itemize}
+		\item Channel capacity
+		\begin{itemize}
+			\item Nyquist bandwidth
+			\item Shannon capacity formula
+			\item The expression $ E_b /N_o $
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Terstruktur}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Mandiri}
+	\begin{itemize}
+		\item Tugas 3
+	\end{itemize}
+\end{frame}
+
 \end{document}
