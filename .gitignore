@@ -15,9 +15,6 @@ slides/slide_2/
 *.nav
 *.out
 *.snm
-slides/2022/01.Pengantar_Komunikasi_Data.pdf
 *~
 referensi/*pdf
 referensi/*epub
-slides/2022/*/*.pdf
-soal/tugas/*/*.pdf
