@@ -1,0 +1,428 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language bahasa
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tugas 1 - MK Komunikasi Data
+\begin_inset Newline newline
+\end_inset
+
+Pengantar Komunikasi Data
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Jelaskan 4 tren teknologi terkait komunikasi data.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Jawaban:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Trend toward faster and cheaper, in both computing and communication
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+More powerful computers supporting more demanding applications
+\end_layout
+
+\begin_layout Enumerate
+The increasing use of optical fiber and high-speed wireless has brought
+ transmission prices down and greatly increased capacity
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Today’s networks are more ”intelligent”
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Differing levels of quality of service (QoS)
+\end_layout
+
+\begin_layout Enumerate
+Variety of customizable services in the areas of network management and
+ security
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The Internet, the Web, and associated applications have emerged as dominant
+ features for both business and personal network landscapes
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Everything over IP
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Intranets and extranets are being used to isolate proprietary information
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mobility
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+iPhone, Droid, and iPad have become drivers of the evolution of business
+ networks and their use
+\end_layout
+
+\begin_layout Enumerate
+Enterprise applications are now routinely delivered on mobile devices
+\end_layout
+
+\begin_layout Enumerate
+Cloud computing is being embraced
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Jelaskan 3 hal yang mempengaruhi perubahan dalam teknologi jaringan.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Jawaban:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Emergence of high-speed LANs
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Personal computers and microcomputer workstations have become an essential
+ tool for office workers
+\end_layout
+
+\begin_layout Enumerate
+Two significant trends altered the requirements of the LAN
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Explosive growth of speed and computing power of personal computers
+\end_layout
+
+\begin_layout Itemize
+LANs have been recognized as aviable and essential computing platform
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Examples of requirements that call for higher- speed LANs:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Centralized server farms
+\end_layout
+
+\begin_layout Itemize
+Power workgroups
+\end_layout
+
+\begin_layout Itemize
+High-speed local backbone
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Corporate WAN needs
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Changes in corporate data traffic patterns are driving the creation of high-spee
+d WANs
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Growing use of telecommuting
+\end_layout
+
+\begin_layout Itemize
+Nature of the application structure has changed
+\end_layout
+
+\begin_layout Itemize
+Intranet computing
+\end_layout
+
+\begin_layout Itemize
+More reliance on personal computers, workstations, and servers
+\end_layout
+
+\begin_layout Itemize
+More data-intensive applications
+\end_layout
+
+\begin_layout Itemize
+Most organizations require access to the Internet
+\end_layout
+
+\begin_layout Itemize
+Traffic patterns have become more unpredictable
+\end_layout
+
+\begin_layout Itemize
+Average traffic load has risen
+\end_layout
+
+\begin_layout Itemize
+More data is transported off premises and into the wide area
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Digital electronics
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The rapid conversion of consumer electronics to digital technology is having
+ an impact on both the Internet and corporate intranets
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Image and video traffic carried by networks is dramatically increasing
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Because of their huge storage capacity digital versatile disks (DVDs) are
+ being incorporated into Web sites
+\end_layout
+
+\begin_layout Itemize
+Digital camcorders have made it easier to make digital video files to be
+ placed on corporate and Internet Web sites
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Jelaskan model sederhana dari komunikasi data dalam diagram blok.
+ Sertakan juga contoh dari suatu komunikasi.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Jawaban:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/fafa/Documents/komunikasi_data/slides/2022/01.Pengantar_Komunikasi_Data/img/img08.png
+	lyxscale 50
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Model Komunikasi Data Sederhana
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sebutkan dan jelaskan tugas-tugas yang ada dalam komunikasi.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Transmission system utilization: ...
+\end_layout
+
+\begin_layout Enumerate
+Interfacing: ...
+\end_layout
+
+\begin_layout Enumerate
+Signal generation: ...
+\end_layout
+
+\begin_layout Enumerate
+Synchronization: ...
+\end_layout
+
+\begin_layout Enumerate
+Exchange management: ...
+\end_layout
+
+\begin_layout Enumerate
+Error detection and correction: ...
+\end_layout
+
+\begin_layout Enumerate
+Flow control: ...
+\end_layout
+
+\begin_layout Enumerate
+Routing: ...
+\end_layout
+
+\begin_layout Enumerate
+Recovery: ...
+\end_layout
+
+\begin_layout Enumerate
+Messange formatting: ...
+\end_layout
+
+\begin_layout Enumerate
+Security: ...
+\end_layout
+
+\begin_layout Enumerate
+Network management: ...
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
