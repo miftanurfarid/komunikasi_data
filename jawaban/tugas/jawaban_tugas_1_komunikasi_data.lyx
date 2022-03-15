@@ -8,7 +8,7 @@
 \use_default_options true
 \maintain_unincluded_children false
 \language bahasa
-\language_package default
+\language_package auto
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
@@ -401,6 +401,10 @@ Error detection and correction: ...
 
 \begin_layout Enumerate
 Flow control: ...
+\end_layout
+
+\begin_layout Enumerate
+Addressing: ..
 \end_layout
 
 \begin_layout Enumerate
