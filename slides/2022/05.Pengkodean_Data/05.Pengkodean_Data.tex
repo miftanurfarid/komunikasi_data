@@ -74,6 +74,129 @@
 		\end{itemize}
 	\end{multicols}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Definition of Digital Signal Encoding Formats}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img03}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Digital Signal Encoding Formats}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img04}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Encoding Schemes}
+	\begin{itemize}
+		\item \textbf{Signal spectrum}\\
+		A good signal design should concentrate the transmitted power in the middle of the transmission bandwidth
+		\item \textbf{Clocking}\\
+		Need to synchronize transmitter and receiver either with an external clock or sync mechanism
+		\item \textbf{Error detection}\\
+		Responsibility of a layer of logic above the signaling level that is known as data link control
+		\item \textbf{Signal interference and noise immunity}\\
+		Certain codes perform better in the presence of noise
+		\item \textbf{Cost and complexity}\\
+		The higher the signaling rate the greater the cost
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Nonreturn to Zero}
+	\begin{itemize}
+		\item Easiest way to transmit digital signals is to use two different voltages for 0 and 1 bits
+		\item Voltage level is constant during a bit interval
+		\begin{itemize}
+			\item No transition (no return to a zero voltage level)
+			\item Absence of voltage for 0, constant positive voltage for 1
+			\item More often, a negative voltage represents one value and a positive voltage represents the other (NRZ-L)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Non-return to Zero Inverted (NRZI)}
+	\begin{itemize}
+		\item Non-return to zero, invert on ones
+		\item Maintains a constant voltage pulse for duration of a bit time
+		\item Data are encoded as presence or absence of signal transition at the beginning of the bit time
+		\begin{itemize}
+			\item Transition (low to high, high to low) denotes binary 1
+			\item No transition denotes binary 0
+		\end{itemize}
+		\item Is an example of differential encoding
+		\begin{itemize}
+			\item Data are represented by changes rather than levels
+			\item More reliable to detect a transition in the presence of noise than to compare a value to a threshold
+			\item Easy to lose sense of polarity
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Spectral Density of Various Signal Encoding Schemes}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{img/img05}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Multilevel Binary Bipolar-AMI}
+	\begin{itemize}
+		\item Use more than two signal levels
+		\item Bipolar-AMI
+		\begin{itemize}
+			\item Binary 0 represented by no line signal\\
+			Binary 1 represented by positive or negative pulse
+			\item Binary 1 pulses alternate in polarity
+			\item No loss of sync if a long string of 1s occurs
+			\item No net dc component
+			\item Lower bandwidth
+			\item Easy error detection
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Multilevel Binary Pseudoternary}
+	\begin{itemize}
+		\item Binary 1 represented by absence of line
+		signal (zero voltage)
+		\item Binary 0 represented by alternating positive and negative pulses
+		\item No advantage or disadvantage over bipolar-AMI and each is the basis of some applications
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Multilevel Binary Issues}
+	\begin{itemize}
+		\item Synchronization with long runs of 0’s or 1’s
+		\begin{itemize}
+			\item Can insert additional bits that force transitions
+			\item Scramble data
+		\end{itemize}
+		\item Not as efficient as NRZ
+		\begin{itemize}
+			\item Each signal element only represents one bit
+			\begin{itemize}
+				\item Receiver distinguishes between three levels: +A, -A, 0
+			\end{itemize}
+			\item A 3 level system could represent $ \log_2 (3) = 1.58 $ bits
+			\item Requires approximately 3 dB more signal power for same probability of bit error
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Theoretical Bit Error Rate for Various Encoding Schemes}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img06}
+	\end{center}
+\end{frame}
 %-----------------------
 %  Tugas
 %-----------------------
