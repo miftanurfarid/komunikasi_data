@@ -371,6 +371,226 @@
 	\end{center}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Phase Shift Keying (PSK)}
+	\begin{itemize}
+		\item The phase of the carrier signal is shifted to represent data
+		\item Binary PSK
+		\begin{itemize}
+			\item Two phases represent the two binary digits
+		\end{itemize}
+		\item Differential PSK
+		\begin{itemize}
+			\item Phase shifted relative to previous transmission rather than some reference signal
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img14}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img15}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quadrature Phase Shift Keying\\(QPSK)}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img16}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{img/img17}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img18}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Performance of Digital to Analog Modulation Schemes}
+	\begin{multicols}{2}
+		\centering \textbf{Bandwidth}
+		\begin{itemize}
+			\item ASK/PSK bandwidth directly relates to bit rate
+			\item Multilevel PSK gives significant improvements
+		\end{itemize}
+		\vfill\null
+		\columnbreak
+		\centering \textbf{In presence of noise}
+		\begin{itemize}
+			\item Bit error rate of PSK and QPSK are about 3 dB superior to ASK and FSK
+			\item MFSK and MPSK have tradeoff between bandwidth efficiency and error performance
+		\end{itemize}
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img19}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quadrature Amplitude Modulation (QAM)}
+	\begin{itemize}
+		\item QAM is used in the asymmetric digital subscriber line (ADSL), in cable modems, and in some wireless standards
+		\item Is a combination of ASK and PSK
+		\item Logical extension of QPSK
+		\item Send two different signals simultaneously on the same carrier frequency
+		\begin{itemize}
+			\item Use two copies of carrier, one shifted 90$^{\circ}$
+			\item Each carrier is ASK modulated
+			\item Two independent signals simultaneously transmitted over the same medium
+			\item At the receiver, the two signals are demodulated and the results are combined to produce the original binary input
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img20}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img21}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img22}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analog Data, Digital Signal}
+	\begin{itemize}
+		\item Digitization is the conversion of analog data into digital data which can then:
+		\begin{itemize}
+			\item Be transmitted using NRZ-L
+			\item Be transmitted using code other than NRZ-L
+			\item Be converted to analog signal
+		\end{itemize}
+		\item Analog to digital conversion is done using a codec
+		\begin{itemize}
+			\item Pulse code modulation
+			\item Delta modulation
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img23}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analog Data, Digital Signal}
+	\begin{itemize}
+		\item Based on the sampling theorem:
+		\begin{itemize}
+			\item “If a signal f(t) is sampled at regular intervals of time and at a rate higher than twice the highest signal frequency, then the samples contain all the information of the original signal. The function f(t) may be reconstructed from these samples by the use of a lowpass filter.”
+		\end{itemize}
+		\item Pulse Amplitude Modulation (PAM)
+		\begin{itemize}
+			\item Analog samples
+			\item To convert to digital, each of these analog samples must be assigned a binary code
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img24}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img25}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img26}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Delta Modulation (DM)}
+	\begin{itemize}
+		\item Analog input is approximated by a staircase function
+		\begin{itemize}
+			\item Can move up or down one quantization level ($ \delta $) at each sampling interval
+		\end{itemize}
+		\item Has binary behavior
+		\begin{itemize}
+			\item Function only moves up or down at each sampling interval
+			\item Output of the delta modulation process can be represented as a single binary digit for each sample
+			\item 1 is generated if the staircase function is to go up during the next interval, otherwise a 0 is generated
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img27}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img28}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Digital data, digital signals
+			\begin{itemize}
+				\item Nonreturn to zero (NRZ)
+				\item Multilevel binary
+				\item Biphase
+				\item Modulation rate
+				\item Scrambling techniques
+			\end{itemize}
+			\item Analog data, digital signals
+			\begin{itemize}
+				\item Pulse code modulation
+				\item Delta modulation (DM)
+				\item Performance
+			\end{itemize}
+			\columnbreak
+			\item Digital data, analog signals
+			\begin{itemize}
+				\item Amplitude shift keying
+				\item Frequency shift keying
+				\item Phase shift keying
+				\item Performance
+				\item Quadrature amplitude modulation
+			\end{itemize}
+		\vfill\null
+		\end{itemize}
+	\end{multicols}
+\end{frame}
+
 %-----------------------
 %  Tugas
 %-----------------------
