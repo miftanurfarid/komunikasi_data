@@ -197,6 +197,180 @@
 		\includegraphics[width=0.6\linewidth]{img/img06}
 	\end{center}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Manchester Encoding}
+	\begin{itemize}
+		\item There is a transition at the middle of each bit period
+		\item Midbit transition serves as a clocking mechanism and also as data
+		\item Low to high transition represents a 1
+		\item High to low transition represents a 0
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Differential Manchester Encoding}
+	\begin{itemize}
+		\item Midbit transition is only used for clocking
+		\item The encoding of a 0 is represented by the presence of a transition at the beginning of a bit period
+		\item A 1 is represented by the absence of a transition at the beginning of a bit period
+		\item Has the added advantage of employing differential encoding
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Biphase Pros and Cons}
+	\begin{itemize}
+		\item Pros
+		\begin{enumerate}
+			\item Synchronization
+			\item No DC component
+			\item Has error detection
+		\end{enumerate}
+		\item Cons
+		\begin{enumerate}
+			\item At least one transition per bit time and may have two
+			\item Maximum modulation rate is twice NRZ
+			\item Requires more bandwidth
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Stream of Binary Ones at 1 Mbps}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img07}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img08}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Scrambling}
+	\begin{itemize}
+		\item Use scrambling to replace sequences that would produce constant voltage
+		\item These filling sequences must:
+		\begin{itemize}
+			\item Provide sufficient transitions for the receiver’s clock to maintain synchronization
+			\item Be recognized by the receiver and replaced with the original data sequence
+			\item Be the same length as the original sequence so there is no data rate penalty
+		\end{itemize}
+		\item Design Goals:
+		\begin{enumerate}
+			\item Have no dc component
+			\item Have no long sequences of zero level line signals
+			\item Have no reduction in data rate
+			\item Error detection capability
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{B8ZS}
+	\begin{itemize}
+		\item Bipolar with 8-zeros substitution
+		\item Coding scheme commonly used in North America
+		\item Based on a bipolar-AMI
+		\begin{itemize}
+			\item Amended with the following rules:
+			\begin{itemize}
+				\item If an octet of all zeros occurs and the last voltage pulse preceding this octet was positive, then the eight zeros of the octet are encoded as 000+-0-+
+				\item If an octet of all zeros occurs and the last voltage pulse preceding this octet was negative, then the eight zeros of the octet are encoded as 000-+0+-
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img09}
+	\end{center}
+	Check if you know why DC is still zero!
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img10}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Digital Data, Analog Signal}
+	\begin{itemize}
+		\item Main use is public telephone system
+		\begin{itemize}
+			\item Was designed to receive, switch, and transmit analog signals
+			\item Has a frequency range of 300Hz to 3400Hz
+			\item Is not at present suitable for handling digital signals from the subscriber locations
+			\item Uses modem (modulator-demodulator) to convert digital data to analog signals and vice versa
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img11}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Amplitude Shift Keying (ASK)}
+	\begin{itemize}
+		\item Encode 0/1 by different carrier amplitudes
+		\begin{itemize}
+			\item Usually have one amplitude zero
+		\end{itemize}
+		\item Susceptible to sudden gain changes
+		\item Inefficient
+		\item Used for:
+		\begin{itemize}
+			\item Up to 1200bps on voice grade lines
+			\item Very high speeds over optical fiber
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Binary Frequency Shift Keying\\(BFSK)}
+	\begin{itemize}
+		\item Most common form of FSK
+		\item Two binary values are represented by two different frequencies (near carrier)
+		\item Less susceptible to error than ASK\\
+		\item Used for:
+		\begin{itemize}
+			\item Up to 1200bps on voice grade lines
+			\item High frequency radio
+			\item Even higher frequency on LANs using coaxial cable
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img12}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Multiple FSK (MFSK)}
+	\begin{itemize}
+		\item Each signaling element represents more than one bit
+		\item More than two frequencies are used
+		\item More bandwidth efficient
+		\item More susceptible to error
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img13}
+	\end{center}
+\end{frame}
+
 %-----------------------
 %  Tugas
 %-----------------------
