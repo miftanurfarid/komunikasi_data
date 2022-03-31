@@ -95,4 +95,81 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{A Two-Dimensional Even Parity Scheme}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img03}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The Internet Checksum}
+	\begin{itemize}
+		\item Error detecting code used in many Internet standard protocols, including IP, TCP, and UDP
+		\item Ones-complement operation
+		\begin{itemize}
+			\item Replace 0 digits with 1 digits and 1 digits with 0 digits
+		\end{itemize}
+		\item Ones-complement addition
+		\begin{itemize}
+			\item The two numbers are treated as unsigned binary integers and added
+			\item If there is a carry out of the leftmost bit, add 1 to the sum (end-around carry)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Example of Internet Checksum}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img04}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cyclic Redundancy Check}
+	\begin{itemize}
+		\item one of most common and powerful checks
+		\item for a block of k bits transmitter generates an n bit frame check sequence (FCS)
+		\item transmits k+n bits which is exactly divisible by some number
+		\item receiver divides frame by that number
+		\begin{itemize}
+			\item if no remainder, assume no error
+			\item for math, see Chapter 6
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{CRC Process}
+	\begin{itemize}
+		\item Modulo 2 arithmetic
+		\begin{itemize}
+			\item Uses binary addition with no carries
+			\item An example is shown on page 218 in the textbook
+		\end{itemize}
+		\item Polynomials
+		\begin{itemize}
+			\item Express all values as polynomials
+			in a dummy variable X, with
+			binary coefficients
+			\item Coefficients correspond to the bits in the binary number
+			\item An example is shown on page 221 in the textbook
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{CRC Process}
+	\begin{itemize}
+		\item Digital logic
+		\begin{itemize}
+			\item Dividing circuit consisting of XOR gates and a shift register
+			\item Shift register is a string of 1-bit storage devices
+			\item Each device has an output line, which indicates the value currently stored, and an input line
+			\item At discrete time instants, known as clock times, the value in the storage device is replaced by the value indicated by its input line
+			\item The entire register is clocked simultaneously, causing a 1-bit shift along the entire register
+			\item An example is referenced on page 223 in the textbook
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 \end{document}
