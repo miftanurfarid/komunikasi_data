@@ -172,4 +172,160 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Modulo 2 Arithmetic (XOR)}
+	\begin{itemize}
+		\item Define:
+		\begin{itemize}
+			\item $ T = (k+n) $-bit frame to be transmitted, $ n < k $
+			\item $ M = k $-bit message, the first $ k $ bits of $ T $
+			\item $ F = n $-bit FCS, the last $ n $ bits of $ T $
+			\item $ P = $ pattern of $ n+1 $ bits, the predetermined divisor
+		\end{itemize}
+		\item We would like T/P to have no remainder
+		\begin{itemize}
+			\item $ T=2^n M+F $
+			\item $ 2^n M/P = Q + R/P $, $ R $ is at least one bit less than $ P $
+			\item Use $ R $ as the FCS (i.e. $ F $), i.e. $ T = 2 M + R $
+			\item Examine if $ T/P $ have no remainder?
+			\begin{itemize}
+				\item $ T/P = (2 M + R)/P = Q + R/P + R/P = Q + (R+R)/P = Q $
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Modulo 2 Arithmetic (XOR)}
+	\begin{itemize}
+		\item Occurrence of errors
+		\begin{itemize}
+			\item $ T_r = T + E $
+			\item $ T = $ transmitted frame
+			\item $ E = $ error pattern with 1s in positions of error
+			\item $ T_r = $ received frame
+		\end{itemize}
+		\item Fail to detect an error if and only if $ T_r $ is divisible by $ P $
+		\begin{itemize}
+			\item i.e. if and only if $ E $ is divisible by $ P $
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img05}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img06}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img07}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Forward Error Correction}
+	\begin{itemize}
+		\item Correction of detected errors usually requires data blocks to be retransmitted
+		\item Not appropriate for wireless applications:
+		\begin{itemize}
+			\item The bit error rate (BER) on a wireless link can be quite high, which would result in a large number of retransmissions
+			\item Propagation delay is very long compared to the transmission time of a single frame
+		\end{itemize}
+		\item Need to correct errors on basis of bits received
+		\item Codeword
+		\begin{itemize}
+			\item On the transmission end each k-bit block of data is mapped into an $ n $-bit block ($ n > k $) using a forward error correction (FEC) encode
+		\end{itemize}
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=\linewidth]{img/img08}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Block Code Principles}
+	\begin{itemize}
+		\item Hamming distance
+		\begin{itemize}
+			\item $ d(v_1, v_2) $ between two $ n $-bit binary sequences $ v_1 $ and $ v_2 $ is the number of bits in which $ v_1 $ and $ v_2 $ disagree
+			\item See example on page 227 in the textbook
+		\end{itemize}
+		\item Redundancy of the code
+		\begin{itemize}
+			\item The ratio of redundant bits to data bits $ (n-k)/k $
+		\end{itemize}
+		\item Code rate
+		\begin{itemize}
+			\item The ratio of data bits to total bits $ k/n $
+			\item Is a measure of how much additional bandwidth is required to carry data at the same data rate as without the code
+			\item See example on page 229 in the textbook
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{img/img09}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Types of errors
+		\item Error detection
+		\item Parity check
+		\begin{itemize}
+			\item Parity bit
+			\item Two-dimensional parity check
+		\end{itemize}
+		\item Internet checksum
+		\item Cyclic redundancy check
+		\begin{itemize}
+			\item Modulo 2 arithmetic
+			\item Polynomials
+			\item Digital logic
+		\end{itemize}
+		\item Forward error correction
+		\begin{itemize}
+			\item Block code principles
+		\end{itemize}
+	\end{itemize}
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Mandiri}
+	\begin{itemize}
+		\item Stallings, W. (2014). Data and Computer Communications, 10th Edition, New Jersey: Upper Saddle River
+		\begin{itemize}
+			\item Chapter 6 Error Detection and Correction
+		\end{itemize}
+		\item Gupta, P. C. (2006). Data Communications and Computer Networks. New Delhi: Prentice Hall of India
+		\begin{itemize}
+			\item Chapter 5 Error Control
+		\end{itemize}
+		\item Tanenbaum, A. S. \& Wetherall, D. J. (2013). Computer Networks, Fifth Edition. London: Pearson.
+		\begin{itemize}
+			\item Section 3.2 Error Detection and Correction
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Terstruktur}
+	\textbf{Tampilkan Tugas 5}
+\end{frame}
+
 \end{document}
