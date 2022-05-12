@@ -1,0 +1,231 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language bahasa
+\language_package default
+\inputencoding cp1256
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tugas 5 - MK Komunikasi Data
+\begin_inset Newline newline
+\end_inset
+
+Deteksi dan Koreksi Kesalahan
+\begin_inset Newline newline
+\end_inset
+
+(
+\emph on
+Error Detection and Correction
+\emph default
+)
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Tentukan data yang akan ditransmisikan jika digunakan teknik CRC dengan
+ generator 
+\begin_inset Formula $x^{3}+x^{2}+1$
+\end_inset
+
+ dan datanya adalah 
+\begin_inset Formula $x^{7}+x^{4}+x^{3}+x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Diketahui sebuah unit data adalah {1010 1001 0011 1001}.
+ Tentukan unit data yang dikirim jika metode 
+\emph on
+error detection
+\emph default
+ yang digunakan adalah 
+\emph on
+checksum
+\emph default
+ dengan banyaknya 
+\emph on
+section
+\emph default
+ adalah dua.
+\end_layout
+
+\begin_layout Enumerate
+Diketahui sebuah unit data adalah {1101 1001 0100 1010}.
+ Tentukan unit data yang dikirim jika metode 
+\emph on
+error detection
+\emph default
+ yang digunakan adalah 
+\emph on
+checksum
+\emph default
+ dengan banyaknya 
+\emph on
+section
+\emph default
+ adalah empat.
+\end_layout
+
+\begin_layout Enumerate
+Diketahui suatu unit data yang sampai ke sebuah perangkat penerima adalah
+ {0000010 1011011 1101100 0000011 0110010}.
+ Apakah data ini diterima oleh perangkat penerima tersebut jika jumlah bit
+ pada setiap 
+\emph on
+section
+\emph default
+-nya adalah 7? Mengapa? Jelaskan!
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+Diketahui suatu data yang diterima oleh perangkat adalah: {1 0 0 1 0 0 1
+ 1 1 0 1 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\emph on
+arah data
+\emph default
+}.
+ Jika perangkat penerima menggunakan 
+\emph on
+hamming code
+\emph default
+.
+ Buktikan bahwa terjadi 
+\emph on
+single-bit error
+\emph default
+ pada saat transmisi, kemudian tentukan dimana 
+\emph on
+error
+\emph default
+ itu terjadi dan perbaiki data tersebut.
+\end_layout
+
+\begin_layout Enumerate
+Diketahui data tiga karakter ASCII yang diterima oleh perangkat penerima
+ adalah: {arah data ← 000 000 111 101 011 011 010 100 101 110 111}.
+ Jika perangkat penerima menggunakan hamming code.
+ Tentukan apakah data tersebut mengalami 
+\emph on
+burst-error
+\emph default
+.
+ Jika ya, berapa panjang 
+\emph on
+burst error
+\emph default
+-nya dan perbaiki data tersebut.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Catatan:
+\series default
+ Tugas dikumpulkan dalam bentuk PDF dan 24 jam sebelum pertemuan selanjutnya.
+\end_layout
+
+\end_body
+\end_document
