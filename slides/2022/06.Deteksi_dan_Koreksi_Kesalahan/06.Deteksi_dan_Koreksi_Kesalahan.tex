@@ -177,19 +177,19 @@
 	\begin{itemize}
 		\item Define:
 		\begin{itemize}
-			\item $ T = (k+n) $-bit frame to be transmitted, $ n < k $
-			\item $ M = k $-bit message, the first $ k $ bits of $ T $
-			\item $ F = n $-bit FCS, the last $ n $ bits of $ T $
-			\item $ P = $ pattern of $ n+1 $ bits, the predetermined divisor
+			\item $ T = n $-bit frame to be transmitted, $ n < k $
+			\item $ D = k $-bit block data, or message, the first $ k $ bits of $ T $
+			\item $ F = (n-k) $-bit FCS, the last $ (n-k)$ bits of $ T $
+			\item $ P = $ pattern of $ n-k+1 $ bits, the predetermined divisor
 		\end{itemize}
 		\item We would like T/P to have no remainder
 		\begin{itemize}
-			\item $ T=2^n M+F $
-			\item $ 2^n M/P = Q + R/P $, $ R $ is at least one bit less than $ P $
-			\item Use $ R $ as the FCS (i.e. $ F $), i.e. $ T = 2 M + R $
+			\item $ T=2^{n-k} D+F $
+			\item $ 2^{n-k} D/P = Q + R/P $, $ R $ is at least one bit less than $ P $
+			\item Use $ R $ as the FCS (i.e. $ F $), i.e. $ T = 2^{n-k}D + R $
 			\item Examine if $ T/P $ have no remainder?
 			\begin{itemize}
-				\item $ T/P = (2 M + R)/P = Q + R/P + R/P = Q + (R+R)/P = Q $
+				\item $ T/P = (2^{n-k}D + R)/P = Q + R/P + R/P = Q + (R+R)/P = Q $
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
