@@ -1,0 +1,196 @@
+\documentclass[pdflatex,compress]{beamer}
+
+%\usetheme[dark,framenumber,totalframenumber]{ElektroITK}
+\usetheme[darktitle,framenumber,totalframenumber]{ElektroITK}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\title{Data Communications}
+\subtitle{Chapter 7 - Flow and Error Control}
+
+\author{Mifta Nur Farid}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+	\frametitle{Data Link Control Protocols}
+	\begin{itemize}
+		\item Requirements and objectives for effective data communication between two directly connected transmitting-receiving stations:
+		\begin{enumerate}
+			\item Frame synchronization
+			\item Flow control
+			\item Error control
+			\item Addressing
+			\item Control and data
+			\item Link management
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Flow Control}
+	\begin{itemize}
+		\item Technique for assuring that a transmitting entity does not over-whelm a receiving entity with data
+		\item In the absence of flow control, the receiver’s buffer may fill up and overflow while it is processing old data
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{img/img01}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Stop-and-Wait Flow Control}
+	\begin{itemize}
+		\item Simplest form of flow control
+		\begin{enumerate}
+			\item Source transmits frame
+			\item Destination receives frame and replies with acknowledgement (ACK)
+			\item Source waits for ACK before sending next frame
+			\item Destination can stop flow by not send ACK
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Stop-and-Wait Flow Control}
+	\begin{itemize}
+		\item It is often the case that a source will break up a large block of data into smaller blocks and transmit the data in many frames
+		\begin{itemize}
+			\item The buffer size of the receiver may be limited
+			\item The longer the transmission, the more likely that there will be an error, necessitating retransmission of the entire frame
+			\item On a shared medium it is usually desirable not to permit one station to use the medium for an extended period, thus causing long delays at the other sending station
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{img/img02}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sliding Windows Flow Control}
+	\begin{itemize}
+		\item Allows multiple numbered frames to be in transit
+		\begin{itemize}
+			\item Receiver has \textbf{buffer W} long
+			\item Transmitter sends up to W frames without ACK
+			\item \textbf{ACK includes number} of next frame expected
+			\item \textbf{Sequence number} is bounded by \textbf{size of field (k)}
+			\begin{itemize}
+				\item Frames are numbered modulo $ 2^k $
+				\item \textbf{Giving max window size of up to $ 2^k - 1 $}
+			\end{itemize}
+			\item Receiver can ACK frames without permitting further transmission (Receive Not Ready)
+			\item Must send a normal acknowledge to resume
+		\end{itemize}
+		\item If have full-duplex link, can piggyback ACKs
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{flushright}
+		3-bit seq, W = 7 frames
+	\end{flushright}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{img/img03}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{img/img04}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Error Control Techniques}
+	\begin{itemize}
+		\item Detection and correction of errors such as:
+		\begin{itemize}
+			\item Lost frames: a frame fails to arrive at the other side
+			\item Damaged frames: frame arrives but some of the bits are in error
+		\end{itemize}
+		\item Common techniques use:
+		\begin{itemize}
+			\item Error detection
+			\item Positive acknowledgment
+			\item Retransmission after timeout
+			\item Negative acknowledgement \& retransmission
+		\end{itemize}
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Automatic Repeat Request (ARQ)}
+	\begin{itemize}
+		\item Collective name for error control mechanisms, including:
+		\begin{itemize}
+			\item stop and wait
+			\item go back N
+			\item selective reject (selective retransmission)
+		\end{itemize}
+		\item Effect of ARQ is to turn an unreliable data link into a reliable one
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Stop and Wait ARQ}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Types of errors
+		\item Error detection
+		\item Parity check
+		\begin{itemize}
+			\item Parity bit
+			\item Two-dimensional parity check
+		\end{itemize}
+		\item Internet checksum
+		\item Cyclic redundancy check
+		\begin{itemize}
+			\item Modulo 2 arithmetic
+			\item Polynomials
+			\item Digital logic
+		\end{itemize}
+		\item Forward error correction
+		\begin{itemize}
+			\item Block code principles
+		\end{itemize}
+	\end{itemize}
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Mandiri}
+	\begin{itemize}
+		\item Stallings, W. (2014). Data and Computer Communications, 10th Edition, New Jersey: Upper Saddle River
+		\begin{itemize}
+			\item Chapter 6 Error Detection and Correction
+		\end{itemize}
+		\item Gupta, P. C. (2006). Data Communications and Computer Networks. New Delhi: Prentice Hall of India
+		\begin{itemize}
+			\item Chapter 5 Error Control
+		\end{itemize}
+		\item Tanenbaum, A. S. \& Wetherall, D. J. (2013). Computer Networks, Fifth Edition. London: Pearson.
+		\begin{itemize}
+			\item Section 3.2 Error Detection and Correction
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tugas Terstruktur}
+	\textbf{Tampilkan Tugas 5}
+\end{frame}
+
+\end{document}
