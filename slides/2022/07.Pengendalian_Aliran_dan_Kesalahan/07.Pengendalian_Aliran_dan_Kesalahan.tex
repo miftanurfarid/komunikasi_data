@@ -38,6 +38,7 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Model of Frame Transmission}
 	\begin{center}
 		\includegraphics[width=0.6\linewidth]{img/img01}
 	\end{center}
@@ -67,7 +68,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Stop-and-Wait Link Utilization}
 	\begin{center}
 		\includegraphics[width=0.9\linewidth]{img/img02}
 	\end{center}
@@ -94,6 +95,7 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Sliding Window Diagram}
 	\begin{flushright}
 		3-bit seq, W = 7 frames
 	\end{flushright}
@@ -103,9 +105,26 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Sliding Window Example}
 	\begin{center}
 		\includegraphics[width=0.8\linewidth]{img/img04}
 	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sliding Window Utilization}
+	\begin{itemize}
+		\item Window size $ W $, transmission time = 1, propagation time = $ a $
+		\item Case 1: $ W >= 2a + 1 $
+		\begin{itemize}
+			\item Sender A can transmit continuously with no pause and normalized throughput is 1.0
+		\end{itemize}
+		\item Case 2: $ W < 2a + 1 $
+		\begin{itemize}
+			\item Sender A exhausts its window at $ t = W $ and cannot send additional frames until $ t = 2a + 1 $.
+			\item Normalized throughput is $ W/(2a+1) $
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -141,7 +160,57 @@
 
 \begin{frame}
 	\frametitle{Stop and Wait ARQ}
-	
+	\begin{itemize}
+		\item Source transmits single frame
+		\item wait for ACK
+		\item if received frame damaged, discard it
+		\begin{itemize}
+			\item transmitter has \textbf{timeout}
+			\item if no ACK within timeout, \textbf{retransmit}
+		\end{itemize}
+		\item if ACK damaged,transmitter will not recognize it
+		\begin{itemize}
+			\item transmitter will retransmit
+			\item receive gets two copies of frame
+			\item use \textbf{alternate numbering} and ACK0 / ACK1
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Stop and Wait ARQ}
+	\begin{multicols}{2}
+		\begin{center}
+			\includegraphics[height=0.9\textheight]{img/img05}
+		\end{center}
+		\begin{itemize}
+			\item see example with both types of errors
+			\item pros and cons
+			\begin{itemize}
+				\item simple
+				\item inefficient
+			\end{itemize}
+		\end{itemize}
+		\vfill\null
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Go-Back-N ARQ}
+	\begin{itemize}
+		\item Most commonly used error control
+		\item Based on sliding-window
+		\item Use window size to control number of outstanding frames
+		\item While no errors occur, the destination will acknowledge incoming frames as usual
+		\begin{itemize}
+			\item RR=receive ready, or piggybacked acknowledgment
+		\end{itemize}
+		\item If the destination station detects an error in a frame, it may send a negative acknowledgment
+		\begin{itemize}
+			\item REJ=reject
+			\item Destination will \textbf{discard that frame and all future frames until the frame in error is received correctly}
+			\item Transmitter must \textbf{go back and retransmit} that frame and all subsequent frames
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
