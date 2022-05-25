@@ -214,29 +214,221 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Summary}
-	\begin{multicols}{2}
+	\frametitle{Selective-Reject (ARQ)}
 	\begin{itemize}
-		\item Types of errors
-		\item Error detection
-		\item Parity check
+		\item Also called selective retransmission
+		\item Only rejected frames are retransmitted
+		\item Subsequent frames are accepted by the receiver and buffered
+		\item Minimizes retransmission
+		\item Receiver must maintain large enough buffer
+		\item More complex logic in transmitter
 		\begin{itemize}
-			\item Parity bit
-			\item Two-dimensional parity check
+			\item Less widely used
 		\end{itemize}
-		\item Internet checksum
-		\item Cyclic redundancy check
+		\item Useful for satellite links with long propagation
+		delays
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Selective-Reject (ARQ)}
+	\begin{itemize}
+		\item Window Size Limitation
 		\begin{itemize}
-			\item Modulo 2 arithmetic
-			\item Polynomials
-			\item Digital logic
-		\end{itemize}
-		\item Forward error correction
-		\begin{itemize}
-			\item Block code principles
+			\item For a $ k $-bit sequence number, the maximum window size is limited to $ 2k-1 $.
 		\end{itemize}
 	\end{itemize}
-	\end{multicols}
+	\begin{center}
+		\includegraphics[height=0.6\textheight]{img/img06}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Go Back N vs Selective Reject}
+	\begin{center}
+		\includegraphics[height=0.9\textheight]{img/img07}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{High Level Data Link Control (HDLC)}
+	\begin{itemize}
+		\item An important data link control protocol
+		\item specified as ISO 33009, ISO 4335
+		\item station types:
+		\begin{itemize}
+			\item Primary - controls operation of link
+			\item Secondary - under control of primary station
+			\item \textbf{Combined} - issues commands and responses
+		\end{itemize}
+		\item link configurations
+		\begin{itemize}
+			\item Unbalanced - 1 primary, multiple secondary
+			\item \textbf{Balanced} - 2 combined stations
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{HDLC Transfer Modes}
+	\begin{itemize}
+		\item Normal Response Mode (NRM)
+		\begin{itemize}
+			\item Unbalanced config, primary initiates transfer
+			\item Used on multi-drop lines, eg host + terminals
+		\end{itemize}
+		\item \textbf{Asynchronous Balanced Mode (ABM)}
+		\begin{itemize}
+			\item Balanced config, either station initiates transmission, has no polling overhead, widely used
+		\end{itemize}
+		\item Asynchronous Response Mode (ARM)
+		\begin{itemize}
+			\item Unbalanced config, secondary may initiate transmit
+			without permission from primary, rarely used
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{HDLC Frame Structure}
+	\begin{itemize}
+		\item synchronous transmission of frames
+		\item single frame format used
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{img/img08}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Flag Fields and Bit Stuffing}
+	\begin{itemize}
+		\item Delimit frame at both ends with 01111110 seq
+		\item Receiver hunts for flag sequence to synchronize
+		\item Bit stuffing used to avoid confusion with data containing flag seq 01111110
+		\begin{itemize}
+			\item 0 inserted after every sequence of five 1s
+			\item if receiver detects five 1s it checks next bit
+			\item if next bit is 0, it is deleted (was stuffed bit)
+			\item if next bit is 1 and seventh bit is 0, accept as flag
+			\item if sixth and seventh bits 1, sender is indicating abort
+		\end{itemize}
+		\begin{center}
+			\includegraphics[width=0.7\textwidth]{img/img09}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Address Field}
+	\begin{itemize}
+		\item identifies secondary station that sent or will receive frame
+		\item usually 8 bits long
+		\item may be extended to multiples of 7 bits
+		\begin{itemize}
+			\item LSB indicates if is the last octet (1) or not (0)
+		\end{itemize}
+		\item all ones address 11111111 is broadcast
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=\textwidth]{img/img10}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Control Field}
+	\begin{itemize}
+		\item different for different frame type
+		\begin{itemize}
+			\item \textbf{Information} - data transmitted to user (next layer up)
+			\begin{itemize}
+				\item Flow and error control piggybacked on information frames
+			\end{itemize}
+			\item \textbf{Supervisory} - ARQ when piggyback not used
+			\item \textbf{Unnumbered} - supplementary link control
+		\end{itemize}
+		\item first 1-2 bits of control field identify frame type
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=\textwidth]{img/img11}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Control Field}
+	\begin{itemize}
+		\item Use of Poll/Final bit depends on context
+		\item In command frame is P bit set to1 to solicit (poll) response from peer
+		\item In response frame is F bit set to 1 to indicate response to soliciting command
+		\item Seq number usually 3 bits
+		\begin{itemize}
+			\item Can extend to 8 bits as shown below
+		\end{itemize}
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=\textwidth]{img/img12}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Information and FCS Fields}
+	\begin{itemize}
+		\item Information Field
+		\begin{itemize}
+			\item In information and some unnumbered frames
+			\item Must contain integral number of octets
+			\item Variable length
+		\end{itemize}
+		\item Frame Check Sequence Field (FCS)
+		\begin{itemize}
+			\item Used for error detection
+			\item Either 16 bit CRC or 32 bit CRC
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{HDLC Operation}
+	\begin{itemize}
+		\item consists of exchange of information, supervisory and unnumbered frames
+		\item have three phases
+		\begin{itemize}
+			\item initialization
+			\begin{itemize}
+				\item by either side, set mode \& seq
+			\end{itemize}
+			\item data transfer
+			\begin{itemize}
+				\item with flow and error control
+				\item using both I \& S-frames (RR, RNR, REJ, SREJ)
+			\end{itemize}
+			\item disconnect
+			\begin{itemize}
+				\item when requested or fault noted
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{HDLC Operation Example}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img13}
+	\end{center}
+\end{frame}
+
+\begin{frame}{HDLC Operation Example}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{img/img14}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{itemize}
+		\item Introduced need for
+		\item Flow control
+		\item Error control
+		\item HDLC
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -244,7 +436,7 @@
 	\begin{itemize}
 		\item Stallings, W. (2014). Data and Computer Communications, 10th Edition, New Jersey: Upper Saddle River
 		\begin{itemize}
-			\item Chapter 6 Error Detection and Correction
+			\item Chapter 7 Data Link Control Protocols
 		\end{itemize}
 		\item Gupta, P. C. (2006). Data Communications and Computer Networks. New Delhi: Prentice Hall of India
 		\begin{itemize}
@@ -252,14 +444,14 @@
 		\end{itemize}
 		\item Tanenbaum, A. S. \& Wetherall, D. J. (2013). Computer Networks, Fifth Edition. London: Pearson.
 		\begin{itemize}
-			\item Section 3.2 Error Detection and Correction
+			\item Chapter 3 The Data Link Layer
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Tugas Terstruktur}
-	\textbf{Tampilkan Tugas 5}
+	\textbf{Tampilkan Tugas 6}
 \end{frame}
 
 \end{document}
