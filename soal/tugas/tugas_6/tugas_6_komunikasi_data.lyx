@@ -1,0 +1,231 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language bahasa
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tugas Komunikasi Data
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Flow & Error Control
+\end_layout
+
+\begin_layout Author
+Mifta Nur Farid
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Jawab soal-soal berikut ini dengan baik dan benar!
+\end_layout
+
+\begin_layout Enumerate
+Dilakukan pertukaran informasi dari 
+\emph on
+Station A
+\emph default
+ ke 
+\emph on
+Station B
+\emph default
+ berupa pengiriman 3 
+\emph on
+frame
+\emph default
+ secara berurutan (
+\emph on
+frame 0
+\emph default
+, 
+\emph on
+frame 1
+\emph default
+, dan 
+\emph on
+frame 2
+\emph default
+).
+ Jika 
+\emph on
+error control
+\emph default
+ yang digunakan adalah 
+\series bold
+stop-and-wait ARQ
+\series default
+, ilustrasikan pertukaran informasi yang terjad dengan asumsi terjadi 
+\emph on
+lost 
+\emph default
+saat pengiriman
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\emph on
+frame 1
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+acknowledgement 2.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dilakukan pertukaran informasi dari 
+\emph on
+Station A
+\emph default
+ ke 
+\emph on
+Station B
+\emph default
+ berupa pengiriman 5 
+\emph on
+frame
+\emph default
+ secara berurutan (
+\emph on
+frame 0
+\emph default
+, 
+\emph on
+frame 1
+\emph default
+, 
+\emph on
+frame 2
+\emph default
+, 
+\emph on
+frame 3
+\emph default
+ dan 
+\emph on
+frame 4
+\emph default
+).
+ Jika terjadi 
+\emph on
+lost
+\emph default
+ saat pengiriman 
+\emph on
+frame 2
+\emph default
+, ilustrasikan pertukaran informasi yang terjadi dengan asumsi
+\emph on
+ Error control
+\emph default
+ yang digunakan adalah
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+go-back-N ARQ
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+selective-reject ARQ.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Catatan: 
+\series default
+Jawaban dikumpulkan dalam format PDF.
+\end_layout
+
+\end_body
+\end_document
